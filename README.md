@@ -1,8 +1,10 @@
 # Freelance Offers Aggregator - ALL-fers!
 
+
 **All-ffers** is a freelance jobs aggregator from multiple freelance websites (aggregating several thousands offers) and a personal management system for user´s own freelance projects.
 
-**Functionality:**
+
+## Functionality:
 - Parsing/scraping of freelance IT offers from multiple websites in several countries.
 - Storing offer and user data in a cloud database (MongoDB Atlas).
 - Internal API for the client-server communication and all CRUD operations.
@@ -15,8 +17,8 @@
 - Session based authorization and authentication (Passport.js).
 - Usage of an external API for current currency exchange rates.
 
-**Technology Stack:** 
 
+## Technology Stack: 
 * React
 * Redux
 * ReactRouter
