@@ -28,21 +28,21 @@ export default function Pagination({ totalPosts }) {
 
   return (
       <p>
-        <button onClick={decreaseCurrentPage}>&lt;</button>
+        <button className="pagination__button" onClick={decreaseCurrentPage}>&lt;</button>
         {
           pagesNumbers.map(page => {
             if (n < 10)
-              return <button key={page} href="#!" onClick={setСurrentPage}>{page}</button>
+              return <button className="pagination__button" key={page} href="#!" onClick={setСurrentPage}>{page}</button>
             else if (n > 10 && (page === 1 || page === 2 ||  page === n - 1 ||page === n))
-              return <button key={page} href="#!" onClick={setСurrentPage}>{page}</button>
+              return <button className="pagination__button" key={page} href="#!" onClick={setСurrentPage}>{page}</button>
             else if (n > 10 && ((page === 3  && currentPage > 4) || (page === n - 2 && currentPage < n - 3)))
-              return <button key={page} href="#!">...</button>
+              return <button className="pagination__button" key={page} href="#!">...</button>
             else if (n > 10 && ((currentPage - page > -3) && (currentPage - page < 3)))
-              return <button key={page} href="#!" onClick={setСurrentPage}>{page}</button>
+              return <button className="pagination__button" key={page} href="#!" onClick={setСurrentPage}>{page}</button>
             else return null
           })
         }
-        <button onClick={increaseCurrentPage}>&gt;</button>
+        <button className="pagination__button" onClick={increaseCurrentPage}>&gt;</button>
       </p>
   )
 }

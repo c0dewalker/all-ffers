@@ -872,5 +872,19 @@ a:link {
 }
 
 .pagination {
+  display: block;
   text-align: center;
+  height: 50px;
+  transition: min-height, min-width, margin 0.7s;
+}
+
+.pagination__button {
+  min-width: 30px;
+  min-height: 30px;
+  margin: 1px 1px;
+}
+
+.pagination__button:hover, .pagination__button:active{
+  min-width: 32px;
+  min-height: 32px;
 }
