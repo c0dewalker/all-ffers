@@ -518,19 +518,32 @@ a:link {
   align-items: center;
 }
 
+/*.main_filterBlock {*/
+/*  border-radius: 4px;*/
+/*  min-height: 15%;*/
+/*  width: 15.5%;*/
+/*  margin-top: 1%;*/
+/*  background-color: #ecebf0;*/
+/*  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);*/
+/*  display: inline-block;*/
+/*  position: fixed;*/
+/*  margin-left: 65%;*/
+/*  padding: 2% 0;*/
+/*  flex-grow: 0;*/
+/*}*/
+
 .main_filterBlock {
   border-radius: 4px;
-  min-height: 15%;
-  width: 15.5%;
+  height: 150px;
+  width: 17.5%;
   margin-top: 1%;
   background-color: #ecebf0;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  display: inline-block;
-  position: fixed;
-  margin-left: 65%;
+  position: sticky;
+  top: 40px;
   padding: 2% 0;
+  flex-grow: 0;
 }
-
 
 .radio_razv {
   margin-top: 8%;
@@ -856,4 +869,8 @@ a:link {
 .budgetRu {
   margin-right: 20px;
   font-size: 0.8rem;
+}
+
+.pagination {
+  text-align: center;
 }

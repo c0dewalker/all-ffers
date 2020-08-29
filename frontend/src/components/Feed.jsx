@@ -80,7 +80,7 @@ function Feed() {
                     return <CardNormal key={offer._id} offer={offer} />
                 })
               }
-              <Pagination totalPosts={offers.length} />
+              <span className="pagination"><Pagination totalPosts={offers.length} /></span>
             </div>
 
             : <div className="spinner">
