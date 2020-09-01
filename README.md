@@ -3,6 +3,7 @@
 
 **All-ffers** is a freelance jobs aggregator from multiple freelance websites (aggregating several thousands offers) and a personal management system for user´s own freelance projects.
 
+![ezgif com-optimize (1)](https://user-images.githubusercontent.com/63851100/91732454-8a90cd00-eba8-11ea-824d-df68e9f8bbec.gif)
 
 ## Functionality:
 - Parsing/scraping of freelance IT offers from multiple websites in several countries.
