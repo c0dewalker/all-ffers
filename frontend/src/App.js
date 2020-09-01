@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import './App.css'
-import './components/Tag.css'
-import './components/Modal.css'
-import './components/Active.css'
+import './css/App.css'
+import './components/shared/Tag.css'
+import './css/Modal.css'
+import './css/Active.css'
 
 
-import Header from './components/layout/Header'
-import Main from './components/pages/Main'
-import Footer from './components/layout/Footer'
-import FirstPage from './components/pages/FirstPage'
+import Header from './components/layout/Header/Header'
+import Main from './components/Main/Main'
+import Footer from './components/layout/Footer/Footer'
+import FirstPage from './components/FirstPage/FirstPage'
 import { fetchOffersThunk } from './store/slice'
-import Profile from './components/pages/profile/Profile'
+import Profile from './components/Profile/Profile'
 
 function App() {
   const dispatch = useDispatch()
