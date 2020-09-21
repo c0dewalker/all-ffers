@@ -1,6 +1,6 @@
-const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 const tress = require('tress');
+const fetch = require('node-fetch');
 const parseDate = require('../parse-date.js');
 
 const Offer = require('../../models/offer.js');

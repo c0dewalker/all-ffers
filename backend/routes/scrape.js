@@ -1,54 +1,31 @@
 const express = require('express');
-
-const scrapeHabr = require('../lib/scrapers/habr-scraper.js');
-const scrapeWeblancer = require('../lib/scrapers/weblancer-scraper.js');
-const scrapePchel = require('../lib/scrapers/pchel-scraper.js');
-const scrapeFreelance = require('../lib/scrapers/freelance-scraper.js');
-const scrapeFreelancehunt = require('../lib/scrapers/freelancehunt-scraper.js');
-
 const router = express.Router();
 
-router.get('/:website', async (req, res) => {
-  const { website } = req.params;
+const scrapeHabr = require('../website_scrapers/scrapers/habr-scraper.js');
+const scrapeWeblancer = require('../website_scrapers/scrapers/weblancer-scraper.js');
+const scrapePchel = require('../website_scrapers/scrapers/pchel-scraper.js');
+const scrapeFreelance = require('../website_scrapers/scrapers/freelance-scraper.js');
+const scrapeFreelancehunt = require('../website_scrapers/scrapers/freelancehunt-scraper.js');
 
-  switch (website) {
-    case 'habr':
-      try {
-        scrapeHabr();
-      } catch (err) {
-        res.json({ message: `Error Form Server! ${err}` });
-      }
-      break;
-    case 'weblancer':
-      try {
-        scrapeWeblancer();
-      } catch (err) {
-        res.json({ message: `Error Form Server! ${err}` });
-      }
-      break;
-    case 'pchel':
-      try {
-        scrapePchel();
-      } catch (err) {
-        res.json({ message: `Error Form Server! ${err}` });
-      }
-      break;
-    case 'freelance':
-      try {
-        scrapeFreelance();
-      } catch (err) {
-        res.json({ message: `Error Form Server! ${err}` });
-      }
-      break;
-    case 'freelancehunt':
-      try {
-        scrapeFreelancehunt();
-      } catch (err) {
-        res.json({ message: `Error Form Server! ${err}` });
-      }
-      break;
-    default:
-      res.json({ message: 'Wrong website name!' });
+router.get('/:website',(req, res) => {
+
+  const {website} = req.params;
+
+  const scrapers = {
+    habr: scrapeHabr,
+    weblancer: scrapeWeblancer,
+    pchel: scrapePchel,
+    freelance: scrapeFreelance,
+    freelancehunt: scrapeFreelancehunt
+  };
+
+  if (website in scrapers === false)
+    res.json({message: 'Wrong website name!'});
+
+  try {
+    scrapers[website]();
+  } catch (err) {
+    res.status(500).send({message: `Error Form Server! ${err}`});
   }
 });
 

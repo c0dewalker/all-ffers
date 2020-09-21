@@ -1,5 +1,5 @@
-const needle = require('needle');
 const cheerio = require('cheerio');
+const needle = require('needle');
 const tress = require('tress');
 
 const Offer = require('../../models/offer.js');
