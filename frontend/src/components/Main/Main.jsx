@@ -17,19 +17,6 @@ function Main() {
       </div>
       <div className="wrap_cardBlock_and_filterBlock">
         <div className="main_cardBlock"> <Feed /> </div>
-       {/*  <div className="main_filterBlock_Search">
-          <div className="blockIN_main_filterBlock_Search">
-          <div className="blockIN_main_filterBlock_Search_Text">Поиск</div>
-            <div className="search"> <SearchBlock /> </div>
-          </div>
-        </div> */}
-       {/*  <div className="main_filterBlock_Tags">
-          <div className="blockIN_main_filterBlock_Tags">
-          <div className="blockIN_main_filterBlock_Tags_Text">Поиск по тегам</div>
-            
-            <TagsBlock className="filterTags" />
-          </div>
-        </div> */}
         <div className="main_filterBlock">
           <div className="blockIN_main_filterBlock">
           <div className="blockIN_main_filterBlock_Search">
